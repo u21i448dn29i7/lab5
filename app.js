@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
 
-  var sumOfValues = parseInt(a,10) + parseInt(b,10);
+  var sumOfValues = parseInt(a, 10) + parseInt(b, 10);
   var stringResult = 'The sum of ' + a + ' and ' + b + ' is ' + sumOfValues + '.';
   var result = [sumOfValues, stringResult];
 
@@ -36,7 +36,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
   //eslint-disable-line
 
-  var productOfValues = parseInt(a,10) * parseInt(b,10);
+  var productOfValues = parseInt(a, 10) * parseInt(b, 10);
   var stringResult = 'The product of ' + a + ' and ' + b + ' is ' + productOfValues + '.';
   var result = [productOfValues, stringResult];
 
@@ -47,7 +47,7 @@ function multiply(a, b) {
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -65,10 +65,21 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
+  var sumOfValues = sum(sum(a, b)[0],c)[0];
+  var productOfValues = multiply(multiply(a,b)[0],c)[0];
+
+  var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfValues + '.';
+  var productString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productOfValues + '.';
+
+  var result = [sumOfValues, productOfValues, sumString, productString];
+
+  console.log('result:' + result);
+
+  return (result);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
