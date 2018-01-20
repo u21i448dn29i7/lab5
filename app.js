@@ -14,8 +14,6 @@ function sum(a, b) {
   var stringResult = 'The sum of ' + a + ' and ' + b + ' is ' + sumOfValues + '.';
   var result = [sumOfValues, stringResult];
 
-  console.log('result:' + result);
-
   return (result);
 }
 
@@ -39,8 +37,6 @@ function multiply(a, b) {
   var productOfValues = parseInt(a, 10) * parseInt(b, 10);
   var stringResult = 'The product of ' + a + ' and ' + b + ' is ' + productOfValues + '.';
   var result = [productOfValues, stringResult];
-
-  console.log('result:' + result);
 
   return (result);
 
@@ -73,8 +69,6 @@ function sumAndMultiply(a, b, c) {
 
   var result = [sumOfValues, productOfValues, sumString, productString];
 
-  console.log('result:' + result);
-
   return (result);
 }
 
@@ -99,12 +93,15 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(testArray) {
   //eslint-disable-line
 
-  var sumOfArrayValues = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+  var sumOfArrayValues = 0;
+
+  for (var i = 0; i < testArray.length; i++) {
+    sumOfArrayValues = sum(sumOfArrayValues, testArray[i])[0];
+  }
+
   var stringResult = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumOfArrayValues + ' is their sum.';
 
   var result = [sumOfArrayValues, stringResult];
-
-  console.log('result:' + result);
 
   return (result);
 
@@ -130,19 +127,16 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(testArray) {
   //eslint-disable-line
 
-  console.log('array length: ' + testArray.length);
   var productOfArrayValues = 1;
 
   for (var i = 0; i < testArray.length; i++) {
     productOfArrayValues = multiply(productOfArrayValues, testArray[i])[0];
-    console.log('arrayValue:' + testArray[i] + ', productOfArrayValues:' + productOfArrayValues)
   }
 
   var stringResult = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + productOfArrayValues + '.';
 
   var result = [productOfArrayValues, stringResult];
 
-  console.log('result:' + result);
   return (result);
 
 }
