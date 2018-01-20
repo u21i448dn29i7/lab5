@@ -25,7 +25,7 @@ Here are a couple of things to keep in mind:
 
 &#x2714; ~~function3~~
 
-function4
+&#x2714; ~~function4~~
  
 * Although this is an individual lab assignment, do feel free to (heck, it is *encouraged* that you) collaborate and work in pairs or groups.
 
