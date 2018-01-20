@@ -23,7 +23,7 @@ Here are a couple of things to keep in mind:
 
 &#x2714; ~~function2~~
 
-function3
+&#x2714; ~~function3~~
 
 function4
  
