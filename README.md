@@ -10,7 +10,7 @@ Put finishing touches on your About Me project and get it deployed. The more tim
 
 ## Second Part: In lab today
 
-Today in lab you will create a new GitHub repo, and create solutions to some little code problems.
+&#x2714; ~~Today in lab you will create a new GitHub repo, and create solutions to some little code problems.~~
 
 **Be sure to follow instructions carefully.**
 
